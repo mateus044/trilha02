@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--
+  ~ @author      Webjump Core Team <dev@webjump.com.br>
+  ~ @copyright   2022 Webjump (http://www.webjump.com.br)
+  ~ @license     http://www.webjump.com.br  Copyright
+  ~ @link        http://www.webjump.com.br
+-->
+<!-- <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd"> -->
+<config>
+    <type name="Magento\Framework\App\Action\Action">
+      <plugin name="PluginAfterAction"  type="Webjump\Noruega\Plugin\PluginAfterAction"  />
+      <plugin name="PluginAroundAction" type="Webjump\Noruega\Plugin\PluginAroundAction" />
+      <plugin name="PluginBeforeAction" type="Webjump\Noruega\Plugin\PluginBeforeAction" />
+    </type>
+
+
+        <!-- Comandos CLI-->
+<!--    <type name="Magento\Framework\Console\CommandList">-->
+<!--        <arguments>-->
+<!--            <argument name="commands" xsi:type="array">-->
+<!--                <item name="example" xsi:type="object">Webjump\Noruega\Console\Command\ExampleCommand</item>-->
+<!--            </argument>-->
+<!--        </arguments>-->
+<!--    </type>-->
+</config>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+
+    <!-- getById -->
+    <route url="/V1/austria/getMyPet" method="POST">
+        <service class="Webjump\Austria\Api\PetRepositoryInterface" method="getPet"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+
+    <!-- List -->
+    <route url="/V1/austria/list" method="GET">
+        <service class="Webjump\Austria\Api\PetRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+
+    <!-- Save -->
+    <route url="/V1/austria/save" method="POST">
+        <service class="Webjump\Austria\Api\PetRepositoryInterface" method="savePet"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+
+</routes>
